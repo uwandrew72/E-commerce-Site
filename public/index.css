@@ -1,0 +1,383 @@
+/*
+ * This is the css file to implement the ui/ux design.
+ * It contains the hidden class to hide the element. The card class is used
+ * to style the card. The .list-layout and .grid-layout are used to style the
+ * layout of the product list. The .c-card is used to style the cart item.
+*/
+.in-num {
+  width: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #24292e;
+  color: white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  height: 60px;
+}
+
+.input-container {
+  position: absolute;
+  left: 15%;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.input {
+  width: 50%;
+}
+
+.input, #searchButton, #optionbutton {
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+#searchButton, #optionbutton {
+  background-color: #ffa500;
+  color: white;
+  cursor: pointer;
+}
+
+.headmenubar ul, .menubar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.headmenubar ul li, .menubar ul li {
+  margin: 0 10px;
+}
+
+.headmenubar ul li img, .menubar ul li img {
+  width: 30px;
+  height: 30px;
+}
+
+.headmenubar button {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.menubar {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menubar button {
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* for the option view */
+#option-window {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #484343;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 0 auto;
+}
+
+/* Main Styles */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* Home View */
+#home {
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Cart View */
+#cart {
+  font-size: 18px;
+}
+
+/* Transaction View */
+#transaction {
+  font-size: 18px;
+}
+
+/* Login & Signup View */
+#login {
+  font-size: 18px;
+}
+
+#login h2 {
+  margin-top: 0;
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+#login button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Error View */
+#error {
+  font-size: 18px;
+  color: red;
+  margin-top: 20px;
+}
+
+/* each card view */
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.price {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  padding: 12px;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card h1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Detail View Styles */
+#detail {
+  font-size: 18px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+#detail p {
+  margin-bottom: 10px;
+}
+
+#detail img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#detail .spec {
+  margin-bottom: 20px;
+}
+
+#detail .price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#detail .price {
+  font-weight: bold;
+}
+
+#detail .add-cart-btn,
+#detail .buy-now-btn {
+  padding: 8px 16px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#detail .stock {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#detail .info {
+  margin-top: 20px;
+}
+
+/* Back Button Styles */
+#back-btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 12px 24px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+button {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+#detail button {
+  padding: 15px;
+  margin: 10px;
+}
+
+#messager {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(241, 241, 241, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 20px;
+  width: 300px;
+}
+
+#messager p {
+  font-size: 18px;
+}
+
+.list-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+#layout-toggle {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+/* cart-item */
+.c-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.c-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.c-card-content {
+  flex-grow: 1;
+}
+
+.c-card h1 {
+  margin-top: 0;
+}
+
+.c-card p {
+  margin-bottom: 5px;
+}
+
+.c-card span {
+  font-weight: bold;
+}

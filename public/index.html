@@ -1,0 +1,108 @@
+<!--
+  This is the html file.
+  It has several blocks to show different views of the website.
+  The main view is the home view, which shows all the products.
+  The other views are hidden by default, and will be shown when the user
+  clicks the corresponding button.
+-->
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>E-commerce Site</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./img/webdesign/logo.png" alt="Camera Shop Logo">
+
+      <div class="input-container">
+        <label for="search-term"></label>
+        <input id='search-term' type='text' placeholder="Search">
+        <button id='search-btn'>search</button>
+        <button id="option-btn">Options</button>
+        <div class="hidden" id="option-window">
+          <label for="catg">Choose the type of items: </label>
+          <select id="catg">
+            <option value="all">All</option>
+            <option value="camera">Cameras</option>
+            <option value="len">Lens</option>
+          </select>
+          <br><br>
+          <label for="lower">Price range: </label>
+          <input type="number" class="in-num" id="lower">
+          <span>to</span>
+          <input type="number" class="in-num" id="upper">
+          <br><br>
+          <label for="no-stock">Including no stock items? </label>
+          <input type="checkbox" id="no-stock" value="noStock">
+        </div>
+      </div>
+
+      <div class="headmenubar">
+        <button id="login-btn">login</button>
+        <button id="signup-btn">sign up</button>
+        <button id="logoff-btn" class="hidden">log off</button>
+        <button id="cart-btn" class="hidden">cart</button>
+        <button id="transaction-btn" class="hidden">transaction</button>
+      </div>
+    </header>
+
+    <div class="menubar">
+      <ul>
+        <li><button id='home-btn'>Home</button></li>
+        <li><button id="camera-btn">Camera</button></li>
+        <li><button id="len-btn">Lenses</button></li>
+      </ul>
+    </div>
+
+    <main>
+      <article id="site-data">
+        <button id="layout-toggle">Toggle Layout</button>
+
+        <!-- home view -->
+        <section id="home-out">
+          <section id="home">
+          </section>
+        </section>
+
+        <!-- product detail view -->
+        <section id="detail" class="hidden">
+          <div id="detail-container"></div>
+        </section>
+
+        <!-- cart view -->
+        <section id="cart" class="hidden">
+        </section>
+
+        <!-- transaction view -->
+        <section id="transaction" class="hidden">
+        </section>
+
+        <!-- login & signup view -->
+        <section id="login" class="hidden">
+          <h2>Login / Sign Up</h2>
+          <section id="sing-spec" class="hidden">
+            <label for="email">E-mail: </label>
+            <input type="text" id="email" name="email">
+          </section>
+          <label for="username">Username: </label>
+          <input type="text" id="username" name="username">
+          <br>
+          <label for="password">Password: </label>
+          <input type="text" id="password" name="password">
+          <br>
+          <button id="login-submit">Login</button>
+          <button id="signup-submit">Sign Up</button>
+        </section>
+
+      </article>
+
+      <!-- error view -->
+      <section id="messager" class="hidden">
+      </section>
+    </main>
+  </body>
+</html>
