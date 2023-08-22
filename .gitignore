@@ -1,7 +1,1 @@
 node_modules
-.*
-!/.gitignore
-!/.gitlab-ci.yml
-public/img
-out.sql
-*.db
